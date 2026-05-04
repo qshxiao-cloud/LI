@@ -104,7 +104,7 @@
         // === 新增：Excel 加载逻辑 ===
         async function loadExcelData() {
             try {
-                const response = await fetch('table1.xlsx');
+                const response = await fetch('table2-2.xlsx');
                 if (!response.ok) throw new Error("无法找到 Excel 文件");
                 
                 const arrayBuffer = await response.arrayBuffer();
@@ -132,7 +132,7 @@
 
             } catch (error) {
                 console.error(error);
-                document.getElementById('loading-status').innerText = "❌ 载入失败：请确保 content/table1.xlsx 存在且在服务器环境运行";
+                document.getElementById('loading-status').innerText = "❌ 载入失败：请确保 content/table2-2.xlsx 存在且在服务器环境运行";
                 document.getElementById('loading-status').classList.add('text-red-500');
             }
         }
